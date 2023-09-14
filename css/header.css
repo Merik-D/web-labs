@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+.header__nav-item {
+    margin-right: 34px;
+    color: #B8BECD;
+}
+
+.login {
+    margin-right: 18px;
+    color: #FB8F1D;
+    font-size: 15px;
+    border: 1px solid #FB8F1D;
+}
+
+.register {
+    background-color:  #FB8F1D;
+    font: Inter, 15px;
+}
