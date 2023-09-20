@@ -1,38 +1,93 @@
-.container{
-    margin: 0 auto;
-    max-width: 1220px;
-    font-family: Inter;
-    
+:root {
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+}
+
+@media screen and (max-width: 1240px) {
+  body {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+  font-family: Inter;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    padding: 0 40px;
+    width: 90%;
+  }
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    display: block;
-    margin-right: 16px;
+  display: block;
+  margin-right: 16px;
 }
 
 button {
-    width: 132px;
-    height: 44px;
-    size: 15px;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
+  width: 132px;
+  height: 44px;
+  size: 15px;
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+}
+
+button:hover {
+  background-color: #c48f56;
+  transform: scale(1.05);
 }
 
 h2 {
-    font-family: Playfair Display;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 50px;
-    letter-spacing: 0em;
-    color: #000000;
+  font-family: Playfair Display;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  color: #000000;
 }
 
 ul {
-    display: flex;
-    padding-left: 0;
+  display: flex;
+  padding-left: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button.pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.zoom-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
 }
