@@ -18,7 +18,10 @@
     <section class="hero">
       <div class="container">
         <header class="header">
-          <nav class="header__nav">
+          <div class="header_menu" onclick="toggleMenu()">
+            <img src="images/menu-icon.png" />
+          </div>
+          <nav id="nav-links" class="header__nav">
             <ul>
               <li class="header__nav-item"><a>Home</a></li>
               <li class="header__nav-item"><a>Destinations</a></li>
@@ -27,12 +30,12 @@
             </ul>
           </nav>
           <img src="images/logo.png" , class="logo" />
-          <div>
+          <div class="buttons">
             <button class="login">Login</button>
             <button class="register">Register</button>
           </div>
         </header>
-        <div class="container hero">
+        <div class="hero__container">
           <div class="hero__inner">
             <h2 class="hero__title">
               Guides by Thousand<br />
@@ -43,37 +46,46 @@
               experts, our city guides app (iOS and Android) is the<br />
               ultimate resource before and during a trip.
             </p>
-            <button class="hero__button">Download</button>
+            <button class="hero__button pulse">Download</button>
           </div>
-          <img src="images/Thousand-03.png" , class="hero_img" />
+          <img src="images/Thousand-03.png" , class="hero_img zoom-image" />
         </div>
       </div>
     </section>
 
     <section class="second_section">
-      <div class="container second_section">
-        <div class="second_section_inner">
-          <h1 class="second_section__title">Testimonials</h1>
-          <div class="rating">
-            <ul class="stars">
-              <li><img src="images/Group.png" /></li>
-              <li><img src="images/Group.png" /></li>
-              <li><img src="images/Group.png" /></li>
-              <li><img src="images/Group.png" /></li>
-              <li><img src="images/Group.png" /></li>
-            </ul>
+      <div class="container">
+        <div class="second_section__container">
+          <div class="second_section_inner">
+            <h1 class="second_section__title">Testimonials</h1>
+            <div class="rating">
+              <ul class="stars">
+                <li><img src="images/Group.png" /></li>
+                <li><img src="images/Group.png" /></li>
+                <li><img src="images/Group.png" /></li>
+                <li><img src="images/Group.png" /></li>
+                <li><img src="images/Group.png" /></li>
+              </ul>
+            </div>
+            <p class="second_section__paragraph">
+              “Quisque in lacus a urna fermentum <br />
+              euismod. Integer mi nibh, dapibus ac <br />
+              scelerisque eu, facilisis quis purus. Morbi <br />
+              blandit sit amet turpis nec”
+            </p>
+            <img
+              src="images/Edward Newgate.png"
+              class="second_section_img__phone"
+            />
+            <h3 class="author">Edward Newgate</h3>
+            <p class="position">Founder Circle</p>
           </div>
-          <p class = "second_section__paragraph">
-            “Quisque in lacus a urna fermentum <br />
-            euismod. Integer mi nibh, dapibus ac <br />
-            scelerisque eu, facilisis quis purus. Morbi <br />
-            blandit sit amet turpis nec”
-          </p>
-          <h3 class="author">Edward Newgate</h3>
-          <p class="position">Founder Circle</p>
+          <img
+            src="images/Edward Newgate.png"
+            class="second_section_img zoom-image"
+          />
         </div>
-        <img src="images/Edward Newgate.png" class="second_section_img" />
-      </div>  
+      </div>
     </section>
 
     <section class="third_section">
@@ -168,5 +180,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
