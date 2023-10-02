@@ -1,0 +1,166 @@
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 16px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-radius: 5px;
+  font-size: 20px;
+  width: 90px;
+  height: 30px;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  margin: 0px auto 15px;
+}
+
+.header form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header form * {
+  margin-right: 15px;
+}
+
+.header form input[type="search"] {
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  size: 80;
+}
+
+.active {
+  background-color: rgb(215, 213, 213);
+}
+
+.section {
+  margin: 0 auto;
+}
+
+.main_section {
+  display: flex;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_block {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.create_block__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create_block__form input {
+  margin-bottom: 10px;
+  width: 300px;
+  font-size: 20px;
+  size: 80;
+}
+
+.create_block__form label {
+  font-size: 20px;
+}
+
+.panel {
+  display: flex;
+  align-items: baseline;
+  place-content: stretch space-around;
+  justify-content: space-between;
+}
+
+.auditions {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin-left: 40px;
+}
+
+.auditions p {
+  height: 30px;
+  width: 200px;
+  font-size: 23px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.select {
+  height: 30px;
+  width: 200px;
+  margin-right: 15px;
+}
+
+.songs {
+  margin: 0 auto;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.song_item {
+  width: 350px;
+  height: 235px;
+  border-color: black;
+  border: 1px solid;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.song_item h3,
+.song_item h4,
+.song_item p,
+.song_item div {
+  margin: 12px 0;
+}
