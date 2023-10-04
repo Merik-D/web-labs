@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>JS</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h2>My music</h2>
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">Songs</a></li>
+          <li><a href="create_song.html">Create song</a></li>
+        </ul>
+      </nav>
+      <form>
+        <input
+          id="search_input"
+          type="search"
+          placeholder="Type something..."
+        />
+        <button type="button" id="search_button">Search</button>
+        <button type="button" id="clear_button">Clear</button>
+      </form>
+    </header>
+
+    <section class="section">
+      <div class="panel">
+        <div class="auditions">
+          <p>Count total auditions</p>
+          <button id="count_button">Сount</button>
+          <div></div>
+        </div>
+        <select class="select">
+          <option>None</option>
+          <option>Name</option>
+          <option>Auditions</option>
+        </select>
+      </div>
+      <hr />
+      <div class="main_section">
+        <div class="songs"></div>
+      </div>
+    </section>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
