@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+    <title>Create</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="right_header">
+        <h2>My music</h2>
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">Songs</a></li>
+            <li><a href="create_song.html">Create song</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="section create">
+      <h1>Create song</h1>
+      <div class="create_block">
+        <form class="create_block__form">
+          <label>Input song title</label>
+          <input type="text" id="song_title"/>
+          <label>Input song duration (in mm:ss format)</label>
+          <input type="text" id="song_duration"/>
+          <label>Input song author</label>
+          <input type="text" id="song_author"/>
+          <label>Input song auditions for all time</label>
+          <input type="text" id="song_auditions"/>
+          <button id="create_song_button" >Submit</button>
+        </form> 
+      </div>
+    </section>
+    <script type="module" src="js/create_song.js"></script>
+  </body>
+</html>

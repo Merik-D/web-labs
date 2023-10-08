@@ -48,6 +48,17 @@ button {
   margin: 0px auto 15px;
 }
 
+.right_header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_header h2 {
+  margin-right: 20px;
+}
+
 .header form {
   display: flex;
   align-items: center;
@@ -91,6 +102,7 @@ button {
 .create_block__form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .create_block__form input {

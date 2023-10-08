@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>JS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+    <title>My Songs</title>
   </head>
 
   <body>
     <header class="header">
-      <h2>My music</h2>
-      <nav>
-        <ul>
-          <li class="active"><a href="index.html">Songs</a></li>
-          <li><a href="create_song.html">Create song</a></li>
-        </ul>
-      </nav>
+      <div class="right_header">
+        <h2>My music</h2>
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">Songs</a></li>
+            <li><a href="create_song.html">Create song</a></li>
+          </ul>
+        </nav>
+      </div>
       <form>
         <input
           id="search_input"
@@ -46,6 +49,6 @@
       </div>
     </section>
 
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
