@@ -1,3 +1,4 @@
+import { getAllSongs } from "./api.js";
 import { searchInput, renderItemsList, clearSearchInput } from "./dom_utils.js";
 
 const searchButton = document.getElementById("search_button");
@@ -6,22 +7,7 @@ const countButton = document.getElementById("count_button");
 
 const sortSelect = document.querySelector(".select");
 
-export const songs = localStorage.getItem("songs")
-  ? JSON.parse(localStorage.getItem("songs"))
-  : [];
-
-export const removeSong = (song_to_delete) => {
-  console.log("song_to_delete:", song_to_delete);
-  const song_index = songs.findIndex((song) => song.id === song_to_delete.id);
-  if (song_index !== -1) {
-    console.log(song_to_delete);
-    songs.splice(song_index, 1);
-    localStorage.setItem("songs", JSON.stringify(songs));
-    renderItemsList(songs);
-  } else {
-    console.log("Song not found in the array.");
-  }
-};
+export let songs = []
 
 export const countTotalAuditionsAndAlert = () => {
   const searchText = searchInput.value.toLowerCase().trim();
@@ -49,7 +35,6 @@ export const search = () => {
 
 export const sort = () => {
   const selectedOption = sortSelect.value;
-
   const filteredSongs = search();
 
   if (selectedOption === "Name") {
@@ -60,6 +45,14 @@ export const sort = () => {
   renderItemsList(filteredSongs);
 };
 
+export const refetchAllSongs = async () => {
+  const allSongs = await getAllSongs();
+
+  songs = allSongs;
+  console.log(songs.length)
+  renderItemsList(songs)
+}
+
 searchButton.addEventListener("click", search);
 
 cancelSearchButton.addEventListener("click", clearSearchInput);
@@ -68,4 +61,4 @@ countButton.addEventListener("click", countTotalAuditionsAndAlert);
 
 sortSelect.addEventListener("change", sort);
 
-renderItemsList(songs);
+refetchAllSongs()

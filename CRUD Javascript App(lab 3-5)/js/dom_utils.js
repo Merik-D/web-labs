@@ -1,5 +1,5 @@
-import { songs, removeSong } from "./index.js";
-
+import { songs, refetchAllSongs, } from "./index.js";
+import { deleteSong } from "./api.js";
 export const searchInput = document.getElementById("search_input");
 export const songsContainer = document.querySelector(".songs");
 
@@ -24,13 +24,13 @@ export const addItemToPage = ({ id, title, duration, author, auditions }) => {
   songsContainer.insertAdjacentHTML("beforeend", itemTemplate);
 
   const removeButton = document.getElementById(`remove_button ${id}`);
-  removeButton.addEventListener("click", (event) => {
+  removeButton.addEventListener("click", async (event) => {
     event.preventDefault();
     const id = removeButton.getAttribute("id").split(" ")[1];
     console.log("id:", id);
     if (confirm(`Do you want to delete ${title}?`)) {
-      const song = songs.find((song) => song.id === id);
-      removeSong(song);
+      await deleteSong(id);
+      refetchAllSongs();
     }
   });
 

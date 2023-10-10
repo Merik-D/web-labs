@@ -1,3 +1,5 @@
+import { updateSong } from "./api.js";
+
 const editSongButton = document.getElementById("edit_song_button");
 
 const editTitleInput = document.getElementById("edit_song_title");
@@ -5,9 +7,6 @@ const editDurationInput = document.getElementById("edit_song_duration");
 const editAuthorInput = document.getElementById("edit_song_author");
 const editAuditionsInput = document.getElementById("edit_song_auditions");
 
-const songs = localStorage.getItem("songs")
-  ? JSON.parse(localStorage.getItem("songs"))
-  : [];
 const song_to_edit = JSON.parse(localStorage.getItem("song_to_edit"));
 
 const getEditInputValues = () => {
@@ -34,25 +33,13 @@ const clearCreateFormInputs = () => {
   editAuditionsInput.value = "";
 };
 
-const editSong = (new_song_info) => {
-    console.log(new_song_info)
-  const song_index = songs.findIndex((song) => song.id === new_song_info.id);
-  console.log(song_index)
-  if (song_index !== -1) {
-    songs[song_index] = new_song_info;
-    localStorage.setItem("songs", JSON.stringify(songs));
-  } else {
-    console.log("Song not found in the array.");
-  }
-};
-
 editSongButton.addEventListener("click", (event) => {
   event.preventDefault();
 
   const song = getEditInputValues();
   clearCreateFormInputs();
   console.log(song)
-  editSong(song);
+  updateSong(song_to_edit.id, song);
   alert("Song edit");
 });
 
